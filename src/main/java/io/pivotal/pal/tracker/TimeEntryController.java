@@ -34,8 +34,7 @@ public class TimeEntryController {
     public @ResponseBody
     ResponseEntity<TimeEntry> read(@PathVariable(value = "id") long id) {
 
-        System.out.println("called read function");
-        TimeEntry retVal = timeEntryRepository.find(id);
+         TimeEntry retVal = timeEntryRepository.find(id);
         HttpStatus httpStatus = HttpStatus.OK;
 
         if (retVal == null) {
